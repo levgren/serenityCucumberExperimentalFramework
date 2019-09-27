@@ -12,8 +12,14 @@ Feature: Adding a product to the cart
     When user clicks on Add to cart button
     Then opens a popup with a success message 'Product successfully added to your shopping cart'
     When user clicks on proceed to checkout button
-    Then opens a shopping cart page 'order'
-    And selected 'product' is in the users cart
+    Then opens a 'order' page
+    And selected product is in the users cart
+      | Printed Dress |
+      | Blouse        |
+      | Printed Summer Dress |
+      | Printed Chiffon Dress |
+      | Faded Short Sleeve T-shirts |
     And user remove all products from the cart
+    And check that appears message with text 'Your shopping cart is empty.'
 
 
