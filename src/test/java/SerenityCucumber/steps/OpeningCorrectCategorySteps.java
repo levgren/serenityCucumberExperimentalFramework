@@ -23,7 +23,7 @@ public class OpeningCorrectCategorySteps {
     }
 
     @Step
-    public void checkThatOpensCorrectPge(DataTable actualCategory){
+    public void checkThatOpensCorrectPge(String actualCategory){
         subcategoriesPage.checkThatOpenedPgeCorrespondsToSelected(actualCategory);
     }
 }

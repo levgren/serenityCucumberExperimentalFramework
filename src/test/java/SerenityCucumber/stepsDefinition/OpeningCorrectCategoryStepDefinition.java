@@ -21,8 +21,8 @@ public class OpeningCorrectCategoryStepDefinition {
         openingCorrectCategorySteps.selectSubcategory(expectedCategory);
     }
 
-    @Then("opens page with subcategory")
-    public void opens_page_with(DataTable actualCategory) {
+    @Then("opens page with (.*)")
+    public void opens_page_with(String actualCategory) {
         openingCorrectCategorySteps.checkThatOpensCorrectPge(actualCategory);
     }
 

@@ -5,10 +5,8 @@ Feature: The pages with correct categories opens
     When when user press button 'Dresses'
     Then opens a 'category' page
     When user press on <subcategory>
-    Then opens page with subcategory
-      | Casual Dresses  |
-      | Summer Dresses  |
-      | Evening Dresses |
+    Then opens page with <subcategory>
+
     Examples: | subcategory |
     | Casual Dresses  |
     | Summer Dresses  |
