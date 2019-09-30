@@ -26,7 +26,6 @@ public class RegisteringExistingUserStepsDefinition {
         registration.pressRegistrationButton();
     }
 
-
     @Then("appears an allert massage with the text '(.*)'")
     public void appears_an_allert_massage_with_the_text(String allertText) {
         registration.verifyAllertMessage(allertText);

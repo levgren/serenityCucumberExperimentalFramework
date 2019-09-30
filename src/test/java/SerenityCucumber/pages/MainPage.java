@@ -30,4 +30,9 @@ public class MainPage extends PageObject{
         }
         return new ProductPage();
     }
+
+    public CategoryPage clickOnTheCategoryButton(String buttonName){
+        getDriver().findElement(By.xpath("//div[@id='block_top_menu']/ul/li[2]/a[@title='" + buttonName + "']")).click();
+        return new CategoryPage();
+    }
 }
