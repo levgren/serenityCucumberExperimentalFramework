@@ -9,13 +9,13 @@ public class SigningInStepsDefinition {
     @Steps
     SigningInSteps signingInSteps;
 
-    @When("user enters valid email '(.*)'")
-    public void user_enters_valid_email_jekson_gmail_com(String email) {
+    @When("user enters valid email (.*)")
+    public void user_enters_valid_email(String email) {
         signingInSteps.enterEmailInSignInSection(email);
     }
 
-    @When("user enters valid password '(.*)'")
-    public void user_enters_valid_password_ACE(String password) {
+    @When("user enters valid password (.*)")
+    public void user_enters_valid_password(String password) {
         signingInSteps.enterThePassword(password);
     }
 
