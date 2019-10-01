@@ -127,14 +127,12 @@ public class CreateAnAccountPage extends PageObject {
     }
 
     public CreateAnAccountPage selectCountry(String country) {
-        Select countryDrop = new Select(countryDropdown);
-        countryDrop.selectByVisibleText(country);
+        new Select(countryDropdown).selectByVisibleText(country);
         return this;
     }
 
     public CreateAnAccountPage selectState(String state){
-        Select stateDrop = new Select(stateDropdown);
-        stateDrop.selectByVisibleText(state);
+        new Select(stateDropdown).selectByVisibleText(state);
         return this;
     }
 
@@ -163,6 +161,4 @@ public class CreateAnAccountPage extends PageObject {
         registerButton.click();
         return new MyAccountPage();
     }
-
-
 }

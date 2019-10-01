@@ -26,7 +26,7 @@ public class RegisterTheNewUserStepDefinition {
     }
 
     @Then("appears page '(.*)'")
-    public void appears_page_authentication(String pageName) throws InterruptedException {
+    public void appears_page_authentication(String pageName) {
         endUser.verifyUrl(pageName);
     }
 

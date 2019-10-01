@@ -23,7 +23,7 @@ public class OpeningRegistrationPageSteps {
     }
 
     @Step
-    public void verifyUrl(String pageName) throws InterruptedException {
+    public void verifyUrl(String pageName) {
         authenticationPage.checkThatAuthenticationPageAppears(pageName);
     }
 

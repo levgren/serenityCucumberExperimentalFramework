@@ -27,7 +27,7 @@ public class CartPage extends PageObject {
 
     public CartPage deleteProductsFromTheCart(){
         deleteProductsButton.click();
-        new WebDriverWait(getDriver(), 3000).until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//p[@class='alert alert-warning']")));
+        new WebDriverWait(getDriver(),3000).until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//p[@class='alert alert-warning']")));
         return this;
     }
 
