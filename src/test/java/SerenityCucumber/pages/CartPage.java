@@ -22,7 +22,7 @@ public class CartPage extends PageObject {
 
     public void verifyProductName(DataTable expectedName){
         List<String> list = expectedName.asList(String.class);
-        assertTrue(list.contains(getDriver().findElement(By.xpath("//td[@class='cart_description']//p[@class='product-name']")).getText()));
+        assertTrue(list.contains($(By.xpath("//td[@class='cart_description']//p[@class='product-name']")).getText()));
     }
 
     public CartPage deleteProductsFromTheCart(){

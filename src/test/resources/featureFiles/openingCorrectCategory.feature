@@ -7,7 +7,8 @@ Feature: The pages with correct categories opens
     When user press on <subcategory>
     Then opens page with <subcategory>
 
-    Examples: | subcategory |
-    | Casual Dresses  |
-    | Summer Dresses  |
-    | Evening Dresses |
+    Examples:
+      | subcategory     |
+      | Casual Dresses  |
+      | Summer Dresses  |
+      | Evening Dresses |

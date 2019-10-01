@@ -25,7 +25,7 @@ public class MainPage extends PageObject{
     public ProductPage selectRandomProduct(DataTable productTypeData) {
         List<String> list = productTypeData.asList(String.class);
         for (int i = 0; i < list.size(); i++) {
-            getDriver().findElement(By.cssSelector("#homefeatured .right-block [title='" + list.get(new Random().nextInt(5)) + "']")).click();
+            $(By.cssSelector("#homefeatured .right-block [title='" + list.get(new Random().nextInt(5)) + "']")).click();
             break;
         }
         return new ProductPage();
