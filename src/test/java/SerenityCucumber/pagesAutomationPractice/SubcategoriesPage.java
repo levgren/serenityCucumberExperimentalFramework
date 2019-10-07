@@ -1,4 +1,4 @@
-package SerenityCucumber.pages;
+package SerenityCucumber.pagesAutomationPractice;
 
 import net.serenitybdd.core.pages.PageObject;
 import net.serenitybdd.core.pages.WebElementFacade;

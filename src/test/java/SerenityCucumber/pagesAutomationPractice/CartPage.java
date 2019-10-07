@@ -1,4 +1,4 @@
-package SerenityCucumber.pages;
+package SerenityCucumber.pagesAutomationPractice;
 
 import cucumber.api.DataTable;
 import net.serenitybdd.core.annotations.findby.FindBy;

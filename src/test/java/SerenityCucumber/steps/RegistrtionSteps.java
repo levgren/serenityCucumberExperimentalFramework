@@ -1,7 +1,7 @@
 package SerenityCucumber.steps;
 
-import SerenityCucumber.pages.CreateAnAccountPage;
-import SerenityCucumber.pages.MyAccountPage;
+import SerenityCucumber.pagesAutomationPractice.CreateAnAccountPage;
+import SerenityCucumber.pagesAutomationPractice.MyAccountPage;
 import net.thucydides.core.annotations.Step;
 
 public class RegistrtionSteps {

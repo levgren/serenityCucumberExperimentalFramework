@@ -1,4 +1,4 @@
-package SerenityCucumber.pages;
+package SerenityCucumber.pagesAutomationPractice;
 
 import static net.thucydides.core.webdriver.ThucydidesWebDriverSupport.getDriver;
 import static org.junit.Assert.assertTrue;

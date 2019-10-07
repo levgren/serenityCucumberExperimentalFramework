@@ -1,9 +1,9 @@
 package SerenityCucumber.steps;
 
 
-import SerenityCucumber.pages.AuthenticationPage;
-import SerenityCucumber.pages.CreateAnAccountPage;
-import SerenityCucumber.pages.MainPage;
+import SerenityCucumber.pagesAutomationPractice.AuthenticationPage;
+import SerenityCucumber.pagesAutomationPractice.CreateAnAccountPage;
+import SerenityCucumber.pagesAutomationPractice.MainPage;
 import net.thucydides.core.annotations.Step;
 
 public class OpeningRegistrationPageSteps {

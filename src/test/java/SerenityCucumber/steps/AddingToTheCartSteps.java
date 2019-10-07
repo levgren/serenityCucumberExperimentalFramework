@@ -1,9 +1,9 @@
 package SerenityCucumber.steps;
 
-import SerenityCucumber.pages.CartPage;
-import SerenityCucumber.pages.LayerCartPopup;
-import SerenityCucumber.pages.MainPage;
-import SerenityCucumber.pages.ProductPage;
+import SerenityCucumber.pagesAutomationPractice.CartPage;
+import SerenityCucumber.pagesAutomationPractice.LayerCartPopup;
+import SerenityCucumber.pagesAutomationPractice.MainPage;
+import SerenityCucumber.pagesAutomationPractice.ProductPage;
 import cucumber.api.DataTable;
 import net.thucydides.core.annotations.Step;
 

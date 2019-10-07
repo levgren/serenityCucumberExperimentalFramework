@@ -1,7 +1,7 @@
 package SerenityCucumber.steps;
 
-import SerenityCucumber.pages.ContactUsPage;
-import SerenityCucumber.pages.MainPage;
+import SerenityCucumber.pagesAutomationPractice.ContactUsPage;
+import SerenityCucumber.pagesAutomationPractice.MainPage;
 import net.thucydides.core.annotations.Step;
 
 public class ContactUsSteps {

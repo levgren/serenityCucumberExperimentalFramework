@@ -1,9 +1,8 @@
 package SerenityCucumber.steps;
 
-import SerenityCucumber.pages.CategoryPage;
-import SerenityCucumber.pages.MainPage;
-import SerenityCucumber.pages.SubcategoriesPage;
-import cucumber.api.DataTable;
+import SerenityCucumber.pagesAutomationPractice.CategoryPage;
+import SerenityCucumber.pagesAutomationPractice.MainPage;
+import SerenityCucumber.pagesAutomationPractice.SubcategoriesPage;
 import net.thucydides.core.annotations.Step;
 
 public class OpeningCorrectCategorySteps {
