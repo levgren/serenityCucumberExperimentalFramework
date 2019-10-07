@@ -16,6 +16,9 @@ public class MainPage extends PageObject{
     @FindBy(xpath = "//a[@class='login']")
     private WebElementFacade signInButton;
 
+    @FindBy(css = "[title='Contact Us']")
+    private WebElementFacade contactUsButton;
+
     public AuthenticationPage clickSignInButton(){
         signInButton.shouldBeVisible();
         signInButton.click();
@@ -34,5 +37,11 @@ public class MainPage extends PageObject{
     public CategoryPage clickOnTheCategoryButton(String buttonName){
         getDriver().findElement(By.xpath("//div[@id='block_top_menu']/ul/li[2]/a[@title='" + buttonName + "']")).click();
         return new CategoryPage();
+    }
+
+    public ContactUsPage pressContactUsButton(){
+        contactUsButton.shouldBeVisible();
+        contactUsButton.click();
+        return new ContactUsPage();
     }
 }
