@@ -1,6 +1,6 @@
-package SerenityCucumber.stepsDefinition;
+package SerenityCucumber.automationPracticeStepsDefinition;
 
-import SerenityCucumber.steps.AddingToTheCartSteps;
+import SerenityCucumber.automationPracticeSteps.AddingToTheCartSteps;
 import cucumber.api.DataTable;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;

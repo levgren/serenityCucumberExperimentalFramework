@@ -1,4 +1,4 @@
-package SerenityCucumber.steps;
+package SerenityCucumber.automationPracticeSteps;
 
 import SerenityCucumber.pagesAutomationPractice.CreateAnAccountPage;
 import SerenityCucumber.pagesAutomationPractice.MyAccountPage;

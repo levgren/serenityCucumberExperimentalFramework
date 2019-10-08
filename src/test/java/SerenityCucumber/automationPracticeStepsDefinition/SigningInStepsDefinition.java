@@ -1,6 +1,6 @@
-package SerenityCucumber.stepsDefinition;
+package SerenityCucumber.automationPracticeStepsDefinition;
 
-import SerenityCucumber.steps.SigningInSteps;
+import SerenityCucumber.automationPracticeSteps.SigningInSteps;
 import cucumber.api.java.en.When;
 import net.thucydides.core.annotations.Steps;
 

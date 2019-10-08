@@ -1,4 +1,4 @@
-package SerenityCucumber.steps;
+package SerenityCucumber.automationPracticeSteps;
 
 import SerenityCucumber.pagesAutomationPractice.AuthenticationPage;
 import net.thucydides.core.annotations.Step;

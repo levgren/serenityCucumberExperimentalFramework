@@ -1,7 +1,7 @@
-package SerenityCucumber.stepsDefinition;
+package SerenityCucumber.automationPracticeStepsDefinition;
 
-import SerenityCucumber.steps.OpeningRegistrationPageSteps;
-import SerenityCucumber.steps.RegistrtionSteps;
+import SerenityCucumber.automationPracticeSteps.OpeningRegistrationPageSteps;
+import SerenityCucumber.automationPracticeSteps.RegistrtionSteps;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
