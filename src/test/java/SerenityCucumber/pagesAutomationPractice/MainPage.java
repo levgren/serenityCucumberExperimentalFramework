@@ -6,9 +6,7 @@ import net.serenitybdd.core.pages.WebElementFacade;
 import net.thucydides.core.annotations.DefaultUrl;
 import net.thucydides.core.pages.PageObject;
 import org.openqa.selenium.By;
-import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
-import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -39,6 +37,15 @@ public class MainPage extends PageObject{
 
     @FindBy(xpath = "//select[@id='selectProductSort']")
     private WebElementFacade productSortSelect;
+
+    @FindBy(xpath = "//input[@id='newsletter-input']")
+    private WebElementFacade newsletterInput;
+
+    @FindBy(xpath = "//button[@name='submitNewsletter']")
+    private WebElementFacade submitNewsletterButton;
+
+    @FindBy(xpath = "//p[@class='alert alert-success']")
+    private WebElementFacade successAllertMessage;
 
     public AuthenticationPage clickSignInButton(){
         signInButton.shouldBeVisible();
@@ -99,6 +106,25 @@ public class MainPage extends PageObject{
         ArrayList<String> sortedList = new ArrayList<>(obtainedList);
         Collections.sort(sortedList);
         assertEquals(sortedList, obtainedList);
+        return this;
+    }
+
+    public MainPage enteringEmailInNewsletterInput(String email){
+        newsletterInput.shouldBeVisible();
+        newsletterInput.clear();
+        newsletterInput.sendKeys(email);
+        return this;
+    }
+
+    public MainPage pressSubmitNewsletterButton(){
+        submitNewsletterButton.shouldBeVisible();
+        submitNewsletterButton.click();
+        return this;
+    }
+
+    public MainPage verifyThatMessageContainsSuccessText(String messageText){
+        successAllertMessage.shouldBeVisible();
+        assertTrue(successAllertMessage.getText().toLowerCase().contains(messageText.toLowerCase()));
         return this;
     }
 }
