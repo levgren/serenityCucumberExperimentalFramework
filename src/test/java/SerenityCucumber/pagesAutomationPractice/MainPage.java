@@ -10,6 +10,8 @@ import org.openqa.selenium.By;
 import java.util.List;
 import java.util.Random;
 
+import static junit.framework.TestCase.assertTrue;
+
 @DefaultUrl("http://automationpractice.com")
 public class MainPage extends PageObject{
 
@@ -18,6 +20,15 @@ public class MainPage extends PageObject{
 
     @FindBy(css = "[title='Contact Us']")
     private WebElementFacade contactUsButton;
+
+    @FindBy(xpath = "//input[@name='search_query']")
+    private WebElementFacade searchInput;
+
+    @FindBy(xpath = "//button[@name='submit_search']")
+    private WebElementFacade submitSearchButton;
+
+    @FindBy(xpath = "//h1[@class='page-heading  product-listing']")
+    private WebElementFacade pageHeading;
 
     public AuthenticationPage clickSignInButton(){
         signInButton.shouldBeVisible();
@@ -43,5 +54,23 @@ public class MainPage extends PageObject{
         contactUsButton.shouldBeVisible();
         contactUsButton.click();
         return new ContactUsPage();
+    }
+
+    public MainPage typeSearchRequestInSearchInout(String searchRequest){
+        searchInput.shouldBeVisible();
+        searchInput.clear();
+        searchInput.sendKeys(searchRequest);
+        return this;
+    }
+
+    public MainPage clickOnSubmitSearchButton(){
+        submitSearchButton.click();
+        return this;
+    }
+
+    public MainPage verifySearchedPageName(String pageName){
+        pageHeading.shouldBeVisible();
+        assertTrue(pageHeading.getText().toUpperCase().contains(pageName.toUpperCase()));
+        return this;
     }
 }
