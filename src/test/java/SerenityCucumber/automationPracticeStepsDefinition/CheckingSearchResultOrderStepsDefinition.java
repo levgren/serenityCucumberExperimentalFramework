@@ -8,7 +8,7 @@ import net.thucydides.core.annotations.Steps;
 public class CheckingSearchResultOrderStepsDefinition {
 
     @Steps
-    CheckingSearchResultOrderSteps checkingSearchResultOrderSteps;
+    private CheckingSearchResultOrderSteps checkingSearchResultOrderSteps;
 
     @When("user selects '(.*)' from selectProductSort")
     public void user_selects_name_asc_from_selectProductSort(String orderType) {

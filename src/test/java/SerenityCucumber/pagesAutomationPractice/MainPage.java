@@ -102,7 +102,7 @@ public class MainPage extends PageObject{
         obtainedList = elementList.stream()
                 .map(WebElementFacade::getText)
                 .collect(Collectors.toCollection(ArrayList::new));
-//        elementList.forEach(element -> obtainedList.add(element.getText()));      //working variant using forEach() with lambda expression
+//        elementList.forEach(element -> obtainedList.add(element.getText()));      //working variant using forEach() method with lambda expression
         ArrayList<String> sortedList = new ArrayList<>(obtainedList);
         Collections.sort(sortedList);
         assertEquals(sortedList, obtainedList);

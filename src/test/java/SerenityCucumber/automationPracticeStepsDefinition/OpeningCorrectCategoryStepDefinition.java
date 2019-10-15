@@ -8,7 +8,7 @@ import net.thucydides.core.annotations.Steps;
 public class OpeningCorrectCategoryStepDefinition {
 
     @Steps
-    OpeningCorrectCategorySteps openingCorrectCategorySteps;
+    private OpeningCorrectCategorySteps openingCorrectCategorySteps;
 
     @When("when user press button '(.*)'")
     public void when_user_press_button_Dresses(String btnName) {

@@ -8,7 +8,7 @@ import net.thucydides.core.annotations.Steps;
 public class ContactUsStepsDefinition {
 
     @Steps
-    ContactUsSteps contactUsSteps;
+    private ContactUsSteps contactUsSteps;
 
     @When("user press a Contact us button")
     public void user_press_a_Contact_us_button() {

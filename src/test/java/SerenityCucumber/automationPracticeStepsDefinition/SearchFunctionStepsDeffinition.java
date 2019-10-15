@@ -8,7 +8,7 @@ import net.thucydides.core.annotations.Steps;
 public class SearchFunctionStepsDeffinition {
 
     @Steps
-    SearchFunctionSteps searchFunctionSteps;
+    private SearchFunctionSteps searchFunctionSteps;
 
     @When("user fill in search_query with '(.*)'")
     public void user_fill_in_search_query_with_summer_dress(String searchRequest) {

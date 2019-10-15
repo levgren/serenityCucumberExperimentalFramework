@@ -9,7 +9,7 @@ import net.thucydides.core.annotations.Steps;
 public class AddingToTheCartStepsDefinition {
 
     @Steps
-    AddingToTheCartSteps addingToTheCartSteps;
+    private AddingToTheCartSteps addingToTheCartSteps;
 
     @When("user select any product")
     public void user_select_any_product(DataTable productTypeData) {

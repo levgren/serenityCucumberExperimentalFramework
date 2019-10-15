@@ -9,7 +9,7 @@ import net.thucydides.core.annotations.Steps;
 public class RegisteringExistingUserStepsDefinition {
 
     @Steps
-    RegistrationOfExistingUserSteps registration;
+    private RegistrationOfExistingUserSteps registration;
 
     @Given("the user is on the '(.*)' page")
     public void the_user_is_on_the_authentication_page(String pageName) {

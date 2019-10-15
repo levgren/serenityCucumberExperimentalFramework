@@ -7,7 +7,7 @@ import net.thucydides.core.annotations.Steps;
 public class SigningInStepsDefinition {
 
     @Steps
-    SigningInSteps signingInSteps;
+    private SigningInSteps signingInSteps;
 
     @When("user enters valid email (.*)")
     public void user_enters_valid_email(String email) {

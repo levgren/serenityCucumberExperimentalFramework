@@ -10,10 +10,10 @@ import net.thucydides.core.annotations.Steps;
 public class RegisterTheNewUserStepDefinition {
 
     @Steps
-    OpeningRegistrationPageSteps endUser;
+    private OpeningRegistrationPageSteps endUser;
 
     @Steps
-    RegistrtionSteps endUsersSteps;
+    private RegistrtionSteps endUsersSteps;
 
     @Given("the user is on the automationpractice page")
     public void the_user_is_on_the_automationpractice_page() {
