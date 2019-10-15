@@ -6,10 +6,17 @@ import net.serenitybdd.core.pages.WebElementFacade;
 import net.thucydides.core.annotations.DefaultUrl;
 import net.thucydides.core.pages.PageObject;
 import org.openqa.selenium.By;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.Select;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
+import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 import java.util.Random;
+import java.util.stream.Collectors;
 
+import static junit.framework.TestCase.assertEquals;
 import static junit.framework.TestCase.assertTrue;
 
 @DefaultUrl("http://automationpractice.com")
@@ -30,6 +37,9 @@ public class MainPage extends PageObject{
     @FindBy(xpath = "//h1[@class='page-heading  product-listing']")
     private WebElementFacade pageHeading;
 
+    @FindBy(xpath = "//select[@id='selectProductSort']")
+    private WebElementFacade productSortSelect;
+
     public AuthenticationPage clickSignInButton(){
         signInButton.shouldBeVisible();
         signInButton.click();
@@ -46,7 +56,7 @@ public class MainPage extends PageObject{
     }
 
     public CategoryPage clickOnTheCategoryButton(String buttonName){
-        getDriver().findElement(By.xpath("//div[@id='block_top_menu']/ul/li[2]/a[@title='" + buttonName + "']")).click();
+        $(By.xpath("//div[@id='block_top_menu']/ul/li[2]/a[@title='" + buttonName + "']")).click();
         return new CategoryPage();
     }
 
@@ -71,6 +81,24 @@ public class MainPage extends PageObject{
     public MainPage verifySearchedPageName(String pageName){
         pageHeading.shouldBeVisible();
         assertTrue(pageHeading.getText().toUpperCase().contains(pageName.toUpperCase()));
+        return this;
+    }
+
+    public MainPage selectTypeOfOrderFromDropdown(String orderType){
+        new Select(productSortSelect).selectByValue(orderType);
+        return this;
+    }
+
+    public MainPage verifyOrder(){
+        ArrayList<String> obtainedList;
+        List<WebElementFacade> elementList = $$(By.xpath("//h5[@itemprop='name']//a[@class='product-name']"));
+        obtainedList = elementList.stream()
+                .map(WebElementFacade::getText)
+                .collect(Collectors.toCollection(ArrayList::new));
+//        elementList.forEach(element -> obtainedList.add(element.getText()));      //working variant using forEach() with lambda expression
+        ArrayList<String> sortedList = new ArrayList<>(obtainedList);
+        Collections.sort(sortedList);
+        assertEquals(sortedList, obtainedList);
         return this;
     }
 }
