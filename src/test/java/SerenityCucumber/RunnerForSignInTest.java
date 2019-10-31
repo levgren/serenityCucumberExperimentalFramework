@@ -9,5 +9,5 @@ import org.junit.runner.RunWith;
         features = "src/test/resources/featureFiles/signingIn.feature",
         plugin = {"pretty"})
 
-public class RunnerForSignIn {
+public class RunnerForSignInTest {
 }

@@ -6,7 +6,8 @@ import org.junit.runner.RunWith;
 
 @RunWith(CucumberWithSerenity.class)
 @CucumberOptions(
-        features = "src/test/resources/featureFiles/registeringNewUser.feature",
+        features = "src/test/resources/featureFiles/subscription.feature",
         plugin = {"pretty"})
 
-public class RunnerForOpeningLoginPage {}
+public class SubscriptionRunnerTest {
+}

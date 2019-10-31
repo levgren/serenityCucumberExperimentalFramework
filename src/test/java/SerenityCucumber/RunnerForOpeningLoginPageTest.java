@@ -6,8 +6,7 @@ import org.junit.runner.RunWith;
 
 @RunWith(CucumberWithSerenity.class)
 @CucumberOptions(
-        features = "src/test/resources/featureFiles/abilityToRegisterExistingUser.feature",
+        features = "src/test/resources/featureFiles/registeringNewUser.feature",
         plugin = {"pretty"})
 
-public class RunnerForRegisteringExistingUser {
-}
+public class RunnerForOpeningLoginPageTest {}

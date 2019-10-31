@@ -6,7 +6,8 @@ import org.junit.runner.RunWith;
 
 @RunWith(CucumberWithSerenity.class)
 @CucumberOptions(
-        features = "src/test/resources/featureFiles/addingToTheCart.feature",
+        features = "src/test/resources/featureFiles/abilityToRegisterExistingUser.feature",
         plugin = {"pretty"})
-public class RunnerForAddingProductToTheCart {
+
+public class RunnerForRegisteringExistingUserTest {
 }

@@ -13,6 +13,7 @@ import java.util.Collections;
 import java.util.List;
 import java.util.Random;
 import java.util.stream.Collectors;
+import java.util.stream.IntStream;
 
 import static junit.framework.TestCase.assertEquals;
 import static junit.framework.TestCase.assertTrue;
@@ -55,9 +56,8 @@ public class MainPage extends PageObject{
 
     public ProductPage selectRandomProduct(DataTable productTypeData) {
         List<String> list = productTypeData.asList(String.class);
-        for (int i = 0; i < list.size(); i++) {
+        if (IntStream.range(0, list.size()).anyMatch(i -> true)) {
             $(By.cssSelector("#homefeatured .right-block [title='" + list.get(new Random().nextInt(5)) + "']")).click();
-            break;
         }
         return new ProductPage();
     }
@@ -102,7 +102,7 @@ public class MainPage extends PageObject{
         obtainedList = elementList.stream()
                 .map(WebElementFacade::getText)
                 .collect(Collectors.toCollection(ArrayList::new));
-//        elementList.forEach(element -> obtainedList.add(element.getText()));      //working variant using forEach() method with lambda expression
+//        elementList.forEach(element -> obtainedList.add(element.getText()));          //working variant using forEach() method with lambda expression
         ArrayList<String> sortedList = new ArrayList<>(obtainedList);
         Collections.sort(sortedList);
         assertEquals(sortedList, obtainedList);

@@ -9,5 +9,5 @@ import org.junit.runner.RunWith;
         features = "src/test/resources/featureFiles/searchFunction.feature",
         plugin = {"pretty"})
 
-public class SearchFunctionRunner {
+public class SearchFunctionRunnerTest {
 }

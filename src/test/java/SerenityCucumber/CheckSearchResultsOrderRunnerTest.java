@@ -9,5 +9,5 @@ import org.junit.runner.RunWith;
         features = "src/test/resources/featureFiles/sortingOfSearchResults.feature",
         plugin = {"pretty"})
 
-public class CheckSearchResultsOrderRunner {
+public class CheckSearchResultsOrderRunnerTest {
 }
